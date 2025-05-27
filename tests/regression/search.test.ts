@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/loginPage';
-import { SearchPage } from '../pages/searchPage';
+import { LoginPage } from '../../pages/loginPage';
+import { SearchPage } from '../../pages/searchPage';
 
 test.describe('Left Sidebar Menu Search Tests', () => {
   let searchPage: SearchPage;
