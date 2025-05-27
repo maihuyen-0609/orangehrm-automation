@@ -14,23 +14,35 @@ It uses **Playwright** with **TypeScript** to automate and validate the Login an
 
 ```
 orangehrm-automation/
-├── pages/                  # Contains Page Object classes for each page
-│   ├── dashboardPage.ts    # Class handling interactions with Dashboard page
-│   ├── loginPage.ts        # Class handling interactions with Login page
-│   └── searchPage.ts       # Class handling interactions with Sidebar Menu Search
+├── .github/
+│   └── workflows/
+│       └── playwright.yml         # GitHub Actions CI/CD config
 │
-├── tests/                  # Contains test scripts
-│   ├── login.test.ts       # Test cases for Login module
-│   └── search.test.ts      # Test cases for Search module
+├── pages/                         # Page Object Model classes
+│   ├── dashboardPage.ts
+│   ├── loginPage.ts
+│   └── searchPage.ts
 │
-├── playwright.config.ts    # Playwright configuration (browsers, reporter, timeouts, etc.)
-├── package.json            # Manages dependencies and test scripts
-├── package-lock.json       # Locks dependency versions
+├── tests/                         # Test cases grouped by type
+│   ├── api/                       # (Placeholder for API tests)
+│   ├── regression/                # Regression test suite
+│   │   ├── login.test.ts
+│   │   └── search.test.ts
+│   ├── smoke/                     # Smoke test suite
+│   │   ├── login.test.ts
+│   │   └── search.test.ts
 │
-├── playwright-report/      # Automatically generated test reports after running tests
-├── test-results/           # Stores test logs, screenshots (if any)
-│
-└── README.md               # Project documentation and instructions
+├── playwright.config.ts           # Global Playwright configuration
+├── package.json                   # NPM scripts and dependencies
+├── package-lock.json              # Exact versions of dependencies
+├── README.md                      # Project documentation
+
+├── playwright-report/             # HTML test report
+│   └── index.html
+├── test-results/                  # Screenshots, logs, JSON reports
+│   ├── .last-run.json
+│   └── results.json
+
 
 ```
 
@@ -127,4 +139,4 @@ npx playwright show-report
 
 ---
 
-If you need any assistance, feel free to ask!
+
