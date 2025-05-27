@@ -13,20 +13,25 @@ It uses **Playwright** with **TypeScript** to automate and validate the Login an
 ## Project Structure
 
 ```
-your-project-folder/
+orangehrm-automation/
+├── pages/                  # Contains Page Object classes for each page
+│   ├── dashboardPage.ts    # Class handling interactions with Dashboard page
+│   ├── loginPage.ts        # Class handling interactions with Login page
+│   └── searchPage.ts       # Class handling interactions with Sidebar Menu Search
 │
-├── pages/                  # Page Object Models for different pages
-│   ├── loginPage.ts
-│   ├── dashboardPage.ts
-│   └── searchPage.ts
+├── tests/                  # Contains test scripts
+│   ├── login.test.ts       # Test cases for Login module
+│   └── search.test.ts      # Test cases for Search module
 │
-├── tests/                  # Test scripts
-│   ├── login.test.ts
-│   └── search.test.ts
+├── playwright.config.ts    # Playwright configuration (browsers, reporter, timeouts, etc.)
+├── package.json            # Manages dependencies and test scripts
+├── package-lock.json       # Locks dependency versions
 │
-├── playwright.config.ts    # Playwright configuration
-├── package.json            # Node dependencies and scripts
-└── README.md               # Project documentation
+├── playwright-report/      # Automatically generated test reports after running tests
+├── test-results/           # Stores test logs, screenshots (if any)
+│
+└── README.md               # Project documentation and instructions
+
 ```
 
 ---
